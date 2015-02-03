@@ -19,9 +19,10 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_main);
-       listView = (ListView) findViewById(R.id.listViewComponents);
+       listView = (ListView) findViewById(R.id.listViewComponentsTitle);
        adapter = new ElectricComponentTitleAdapter(this, R.layout.electric_components_layout,new ArrayList<ElectricComponentTitle>(), this);
        listView.setAdapter(adapter);
+       adapter.add(new ElectricComponentTitle("{AA"+Client.BETWEAN_TITLE_AND_INFO_SPACER+"dgsss"+Client.BETWEAN_TITLE_AND_INFO_SPACER+"5}"));
 
     }
 

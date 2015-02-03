@@ -39,6 +39,8 @@ public class ElectricComponentTitleAdapter extends  ArrayAdapter<ElectricCompone
 
         TextView text = (TextView) convertView.findViewById(R.id.liTextComp);
 
+        //image!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
         final ElectricComponentTitle c = components.get(position);
         text.setText(c.name);
         convertView.setOnClickListener(new View.OnClickListener() {

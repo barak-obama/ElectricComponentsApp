@@ -7,19 +7,27 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
 public class ElectricComponentActivity extends ActionBarActivity {
+
+    ListView lv;
+    ElectricComponentAdapter eca;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_component);
+        lv = (ListView) findViewById(R.id.listViewComponent);
+        eca = new ElectricComponentAdapter(this, R.layout.electric_component_prop_layout,new ArrayList<Info>(),this);
+        lv.setAdapter(eca);
 
     }
 
